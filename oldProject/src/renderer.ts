@@ -27,7 +27,9 @@
  */
 
 // import './index.css';
-import './components/TravelManager.tsx';
-import './components/TableManager.tsx';
+// import './components/TravelManager.tsx';
+// import './components/TableManager.tsx';
+import './main.ts';
+
 
 console.log('👋 This message is being logged by renderer.ts", included via Vite');
