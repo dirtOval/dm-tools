@@ -1,7 +1,11 @@
+import TableSelectorPane from './TableSelectorPane.tsx';
+import DisplayPane from './DisplayPane.tsx';
+
 const TableManager = () => {
   return (
-    <div>
-      <h1>Im Table</h1>
+    <div className="table-manager">
+      <TableSelectorPane />
+      <DisplayPane />
     </div>
   )
 };
