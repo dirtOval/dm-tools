@@ -2,7 +2,7 @@ import Table from './Table.tsx';
 
 const TableList = () => {
   return (
-    <div class="table-list">
+    <div className="table-list">
       <Table />
     </div>
   )

@@ -3,7 +3,7 @@ import EncounterDisplay from './EncounterDisplay.tsx';
 
 const DisplayPane = () => {
   return (
-    <div className="table-display">
+    <div className="display-pane">
       <TableInfo />
       <EncounterDisplay />
     </div>
