@@ -1,0 +1,48 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.table-manager {
+  display: flex;
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.pane {
+  height: 90%;
+  width: 48%;
+}
+
+.table-selector-pane {
+  border: 1px solid red;
+  
+}
+
+.display-pane {
+  border: 1px solid teal;
+}
+
+.table-list {
+  /* border: 1px solid green;
+  width: 100%; */
+}

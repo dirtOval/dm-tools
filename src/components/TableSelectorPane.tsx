@@ -3,7 +3,7 @@ import TableList from "./TableList.tsx";
 
 const TableSelectorPane = () => {
   return (
-    <div className="table-selector-pane">
+    <div className="table-selector-pane pane">
       <TableSelectorOptions />
       <TableList />
     </div>
