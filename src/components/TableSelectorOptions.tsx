@@ -1,11 +1,16 @@
 const TableSelectorOptions = () => {
   return (
-    <div>
-      <span>new</span>
+    <div className="table-selector-options">
+      <button>new</button>
+      <button>save</button>
+      <button>saveAs</button>
+      <button>del</button>
+      <button>dup</button>
+      {/* <span>new</span>
       <span>save</span>
       <span>saveAs</span>
       <span>del</span>
-      <span>dup</span>
+      <span>dup</span> */}
     </div>
   )
 }
