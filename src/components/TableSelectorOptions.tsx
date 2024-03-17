@@ -3,7 +3,7 @@ const TableSelectorOptions = () => {
     <div className="table-selector-options">
       <button>new</button>
       <button>save</button>
-      <button>saveAs</button>
+      <button id="save-as">saveAs</button>
       <button>del</button>
       <button>dup</button>
       {/* <span>new</span>

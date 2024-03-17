@@ -32,14 +32,14 @@ body {
 
 .pane {
   height: 90%;
-  width: 48%;
+  
   background: rgba(0.25, 0.25, 0.25, 0.5);
   border-radius: 5%;
 }
 
 .table-selector-pane {
   /* border: 1px solid red; */
-  
+  width: 38%;
 }
 
 .table-selector-options {
@@ -48,11 +48,16 @@ body {
 }
 
 .table-selector-options button {
-  
+  width: 14%;
+  font-size: 0.675rem;
+}
+
+#save-as {
+  width: 20%;
 }
 
 .display-pane {
-  /* border: 1px solid teal; */
+  width: 60%;
 }
 
 .table-list {
