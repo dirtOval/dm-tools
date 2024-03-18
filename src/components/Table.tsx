@@ -1,6 +1,6 @@
 const Table = () => {
   return (
-    <div>
+    <div className="table-card">
       <p>Deep Jungle</p>
       <div className="table-swatch"></div>
     </div>
