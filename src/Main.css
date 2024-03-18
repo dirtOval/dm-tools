@@ -87,7 +87,35 @@ body {
   width: 60%;
 }
 
-.table-list {
-  /* border: 1px solid green;
-  width: 100%; */
+.table-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.table-option {
+  display: flex;
+  width: 20%;
+  /* border: 1px solid green; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.on-hit {
+  width: 30%;
+}
+
+.table-lock {
+  width: 12%;
+}
+
+.table-option input {
+  width: 35%;
+  height: 50%;
+  /* border: 1px solid red; */
+}
+
+.encounter-display {
+
 }
