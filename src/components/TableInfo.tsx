@@ -13,7 +13,7 @@ const TableInfo = () => {
       <div className="table-option on-hit">
         <label htmlFor="selector-dice">On Hit:</label>
         <select id="selector-dice">
-          <option selected>1d12 + 1d8</option>
+          <option>1d12 + 1d8</option>
           <option>2d10</option>
         </select>
       </div>

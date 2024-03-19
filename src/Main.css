@@ -58,12 +58,15 @@ body {
   width: 50%;
   height: 3rem;
   /* border: 1px solid white; */
-  background-color: rgba(70, 70, 92, 0.75);
   /* text-align: center; */
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-radius: 2%;
+}
+
+.card-selected {
+  background-color: rgba(70, 70, 92, 0.75);
 }
 
 .table-swatch {
