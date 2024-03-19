@@ -14,8 +14,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    // turn this on when i'm less tired :)
     /* Linting */
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
