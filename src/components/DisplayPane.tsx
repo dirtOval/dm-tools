@@ -1,11 +1,11 @@
 import TableInfo from './TableInfo.tsx';
 import EncounterDisplay from './EncounterDisplay.tsx';
 
-const DisplayPane = () => {
+const DisplayPane = ({tables}) => {
   return (
     <div className="display-pane pane">
       <TableInfo />
-      <EncounterDisplay />
+      <EncounterDisplay tables={tables} />
     </div>
   )
 }

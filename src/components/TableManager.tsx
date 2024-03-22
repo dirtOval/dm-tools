@@ -8,18 +8,20 @@ const TableManager = () => {
   const [tables, setTables] = useState([])
 
   useEffect( () => {
+    let tables = [];
     (async function getEncounters() {
-      let response = await fetch('http://localhost:4200/encounters');
+      tables = await fetch('http://localhost:4200/encounters');
       //@ts-ignore
-      response = await response.json();
-      console.log(JSON.stringify(response.encounters));
+      tables = await tables.json();
+      // console.log(JSON.stringify(tables.encounters));
+      setTables(tables.encounters);
     })();
   }, []);
 
   return (
     <div className="table-manager">
       <TableSelectorPane />
-      <DisplayPane />
+      <DisplayPane tables={tables} />
     </div>
   )
 };

@@ -1,9 +1,9 @@
-const Encounter = ({num}) => {
+const Encounter = ({order, name}) => {
   return (
     <div className="encounter">
-      <span>{num} - a dog</span>
+      <span>{order} - {name}</span>
       <button>Edit</button>
-      <button>Del</button>
+      {/* <button>Del</button> */}
     </div>
   )
 }

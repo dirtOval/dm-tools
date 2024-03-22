@@ -38,7 +38,7 @@ body {
 
 .table-selector-pane {
   /* border: 1px solid red; */
-  width: 38%;
+  width: 33%;
 }
 
 .table-selector-options {
@@ -86,7 +86,7 @@ body {
 }
 
 .display-pane {
-  width: 60%;
+  width: 65%;
 }
 
 .table-info {
@@ -126,13 +126,15 @@ body {
   height: 85%;
   margin-left: 1rem;
   /* border: 1px solid red; */
+  align-items: space-around;
 }
 
 .encounter {
   display: flex;
   justify-content: space-between;
-  width: 35%;
+  width: 45%;
   margin-bottom: 0.35rem;
+  font-size: 0.85rem;
   /* border: 1px solid green; */
 }
 
