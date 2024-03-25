@@ -27,3 +27,11 @@ release
 
 #PRECIOUS PRECIOUS KEYS
 .env
+
+#the database lmao
+dmStuff.db
+dmStuff.db-shm
+dmStuff.db-wal
+
+#other stuff
+tools
