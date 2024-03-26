@@ -29,7 +29,31 @@ const addBiome = (name) => {
   }
 }
 
+//duplicate encounter
+const duplicateBiome = (id) => {
+  try {
+    const dupeQuery = db.prepare(`
+    INSERT INTO biomes (name, color, rows, frequency, die1, die2, threshold, locked)
+    SELECT name || '(copy)', color, rows, frequency, die1, die2, threshold, locked
+    FROM biomes WHERE id=${id}
+    `);
+    const transaction = db.transaction(() => {
+      const info = dupeQuery.run();
+      console.log(`Duplicated biome #${id}, new id is ${info.lastInsertRowId}.`);
+    });
+    transaction();
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+
+//update encounter
+
+//delete encounter
+
 module.exports = {
   getAllBiomes,
-  addBiome
+  addBiome,
+  duplicateBiome
 };
