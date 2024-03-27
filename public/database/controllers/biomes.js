@@ -29,7 +29,7 @@ const addBiome = (name) => {
   }
 }
 
-//duplicate encounter
+//duplicate biome
 const duplicateBiome = (id) => {
   try {
     const dupeQuery = db.prepare(`
@@ -48,12 +48,41 @@ const duplicateBiome = (id) => {
   }
 }
 
-//update encounter
+//update biome
+//okay time to make a decision about how this data gets passed to the db
+//ideally it gets sent back the same way. this might be subject to change
 
-//delete encounter
+const updateBiome = (biome) => {
+  try {
+    const updateQuery = db.prepare(`
+      UPDATE biomes
+      SET name = '${biome.name}',
+          color = '${biome.color}',
+          rows = ${biome.rows},
+          frequency = ${biome.frequency},
+          die1 = ${biome.die1},
+          die2 = ${biome.die2},
+          threshold = ${biome.threshold},
+          locked = ${biome.locked}
+      WHERE id = ${biome.id}
+    `);
+    const transaction = db.transaction(() => {
+      const info = updateQuery.run();
+      console.log(`Updated biome #${biome.id}.`)
+    });
+    transaction();
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+};
+
+
+//delete biome
 
 module.exports = {
   getAllBiomes,
   addBiome,
-  duplicateBiome
+  duplicateBiome,
+  updateBiome
 };
