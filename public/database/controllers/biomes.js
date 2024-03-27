@@ -12,6 +12,9 @@ const getAllBiomes = () => {
   }
 };
 
+//you forgot the get biome by iddddd
+//wait do i actually need this? let's think about this first.
+
 const addBiome = (name) => {
   try {
     const insertQuery = db.prepare(
@@ -79,10 +82,27 @@ const updateBiome = (biome) => {
 
 
 //delete biome
+const deleteBiome = (id) => {
+  try {
+    const deleteQuery = db.prepare(`
+      DELETE FROM biomes
+      WHERE id = ${id}
+    `);
+    const transaction = db.transaction(() => {
+      const info = deleteQuery.run();
+      console.log(`Deleted biome #${id}`);
+    });
+    transaction();
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+};
 
 module.exports = {
   getAllBiomes,
   addBiome,
   duplicateBiome,
-  updateBiome
+  updateBiome,
+  deleteBiome
 };

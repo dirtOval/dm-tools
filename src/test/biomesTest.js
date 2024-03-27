@@ -11,19 +11,23 @@ const db = require('../../public/database/db.js').db;
 // biomes.duplicateBiome(5);
 // console.log(biomes.getAllBiomes());
 
-biomes.addBiome('giraffe world');
-console.log(biomes.getAllBiomes());
-biomes.updateBiome({
-  id: 7,
-  name: 'zebra zone',
-  color: 'magenta',
-  rows: 11,
-  frequency: 2,
-  die1: 6,
-  die2: 6,
-  threshold: 10,
-  locked: 1
-});
-console.log(biomes.getAllBiomes());
+// biomes.addBiome('giraffe world');
+// console.log(biomes.getAllBiomes());
+// biomes.updateBiome({
+//   id: 7,
+//   name: 'zebra zone',
+//   color: 'magenta',
+//   rows: 11,
+//   frequency: 2,
+//   die1: 6,
+//   die2: 6,
+//   threshold: 10,
+//   locked: 1
+// });
+
 // const treeFinder = db.prepare(`SELECT * FROM biomes WHERE name='tree zone'`);
 // biomes.updateBiome()
+
+console.log(biomes.getAllBiomes());
+biomes.deleteBiome(7);
+console.log(biomes.getAllBiomes());
