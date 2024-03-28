@@ -2,8 +2,7 @@ const db = require('../db.js').db;
 
 const getAllBiomes = () => {
   try {
-    const query = 'SELECT * FROM biomes';
-    const readQuery = db.prepare(query);
+    const readQuery = db.prepare('SELECT * FROM biomes');
     const rowList = readQuery.all();
     return rowList;
   } catch (err) {
