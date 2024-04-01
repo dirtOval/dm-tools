@@ -20,15 +20,15 @@ const TableInfo = () => {
 
       <div className="table-option">
         <label htmlFor="freq-dc">1d20 on</label>
-        <input type="number" id="freq-dc" value="18"/>
+        <input type="number" id="freq-dc" defaultValue="18"/>
       </div>
 
       <div className="table-option">
-        <span>Every <input type="number" value="1"/> Hours</span>
+        <span>Every <input type="number" defaultValue="1"/> Hours</span>
       </div>
 
       <div className="table-option table-lock">
-        <label for="lock">Lock?</label>
+        <label htmlFor="lock">Lock?</label>
         <input id="lock" type="checkbox" />
       </div>
     </div>
