@@ -1,12 +1,9 @@
-const { contextBridge } = require("electron")
-const biomes = require("../public/database/controllers/biomes.js")
-
-// public\database\controllers\biomes.js
-// electron\preload.ts
+const { contextBridge } = require("electron");
+const biomes = require("../public/database/controllers/biomes.js");
 
 contextBridge.exposeInMainWorld("db", {
   biomes,
-})
+});
 
 // import { contextBridge, ipcRenderer } from 'electron'
 

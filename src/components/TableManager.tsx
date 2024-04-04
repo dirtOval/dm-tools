@@ -10,21 +10,22 @@ const TableManager = () => {
   const getBiomes = useCallback(() => {
     const data = window.db.biomes?.getAllBiomes();
     setTables(data);
+    console.log('data got');
   }, [])
   
-  useEffect( () => {
-    //RIP my express server, at least it was a good refresher
-    //
-    // let tables = [];
-    // (async function getEncounters() {
-    //   tables = await fetch('http://localhost:4200/encounters');
-    //   //@ts-ignore
-    //   tables = await tables.json();
-    //   // console.log(JSON.stringify(tables.encounters));
-    //   setTables(tables.encounters);
-    // })();
-    getBiomes();
-  }, []);
+  // useEffect( () => {
+  //   RIP my express server, at least it was a good refresher
+    
+  //   let tables = [];
+  //   (async function getEncounters() {
+  //     tables = await fetch('http://localhost:4200/encounters');
+  //     //@ts-ignore
+  //     tables = await tables.json();
+  //     // console.log(JSON.stringify(tables.encounters));
+  //     setTables(tables.encounters);
+  //   })();
+  //   getBiomes();
+  // }, []);
 
   return (
     <div className="table-manager">
