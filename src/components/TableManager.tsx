@@ -7,11 +7,11 @@ const TableManager = () => {
   const [selected, setSelected] = useState(0);
   const [tables, setTables] = useState([])
 
-  const getBiomes = useCallback(() => {
-    const data = window.db.biomes?.getAllBiomes();
-    setTables(data);
-    console.log('data got');
-  }, [])
+  // const getBiomes = useCallback(() => {
+  //   const data = window.db.biomes?.getAllBiomes();
+  //   setTables(data);
+  //   console.log('data got');
+  // }, [])
   
   // useEffect( () => {
   //   RIP my express server, at least it was a good refresher

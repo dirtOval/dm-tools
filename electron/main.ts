@@ -1,5 +1,7 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain,  } from 'electron'
 import path from 'node:path'
+// import * as biomes from '../public/database/controllers/biomes.js';
+const biomes = require('../public/database/controllers/biomes.js');
 
 // The built directory structure
 //
@@ -13,6 +15,19 @@ import path from 'node:path'
 process.env.DIST = path.join(__dirname, '../dist')
 process.env.VITE_PUBLIC = app.isPackaged ? process.env.DIST : path.join(process.env.DIST, '../public')
 
+//DB function zone
+
+const handleGetAllBiomes = async () => {
+  try {
+    const data = await biomes.getAllBiomes();
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+};
+
+
 
 let win: BrowserWindow | null
 // 🚧 Use ['ENV_NAME'] avoid vite:define plugin - Vite@2.x
@@ -23,7 +38,7 @@ function createWindow() {
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      sandbox: false
+      // sandbox: false
     },
   })
   // Test active push message to Renderer-process.
@@ -58,4 +73,7 @@ app.on('activate', () => {
   }
 })
 
-app.whenReady().then(createWindow)
+app.whenReady().then(() => {
+  handleGetAllBiomes();
+  createWindow();
+});

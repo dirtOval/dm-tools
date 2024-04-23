@@ -1,6 +1,8 @@
 process.env.NODE_ENV= "development"
 
 const Database = require("better-sqlite3");
+// import Database from 'better-sqlite3';
+
 const path = require("path");
 
 const dbPath =
@@ -36,3 +38,4 @@ biomeStatement.run();
 encounterStatement.run();
 
 exports.db = db
+// export default db;

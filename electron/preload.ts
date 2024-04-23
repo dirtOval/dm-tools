@@ -1,8 +1,9 @@
 const { contextBridge } = require("electron");
-const biomes = require("../public/database/controllers/biomes.js");
+// const biomes = require("../public/database/controllers/biomes.js");
+// import * as biomes from '../public/database/controllers/biomes.js';
 
 contextBridge.exposeInMainWorld("db", {
-  biomes,
+  // biomes,  
 });
 
 // import { contextBridge, ipcRenderer } from 'electron'
@@ -122,3 +123,5 @@ contextBridge.exposeInMainWorld("db", {
 // }
 
 // setTimeout(removeLoading, 4999)
+
+// //---------------------------------boilerplate

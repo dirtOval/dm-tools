@@ -1,4 +1,5 @@
 const db = require('../db.js').db;
+// import db from '../db.js';
 
 const getAllBiomes = () => {
   try {
@@ -105,3 +106,5 @@ module.exports = {
   updateBiome,
   deleteBiome
 };
+
+// export { getAllBiomes, addBiome, duplicateBiome, updateBiome, deleteBiome };
